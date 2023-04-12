@@ -12,8 +12,8 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tb_blocos")
-public class Blocos {
+@Table(name = "tb_bloco")
+public class Bloco {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,11 +29,11 @@ public class Blocos {
     @JoinColumn(name = "atividade_id")
     private Atividade atividade;
 
-    public Blocos(){
+    public Bloco(){
 
     }
 
-    public Blocos(Integer id, Instant inicio, Instant fim, Atividade atividade) {
+    public Bloco(Integer id, Instant inicio, Instant fim, Atividade atividade) {
         this.id = id;
         this.inicio = inicio;
         this.fim = fim;

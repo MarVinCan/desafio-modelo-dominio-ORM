@@ -33,7 +33,7 @@ public class Atividade {
     private Categoria categoria;
 
     @OneToMany(mappedBy = "atividade")
-    private Set<Blocos> blocos = new HashSet<>();
+    private Set<Bloco> blocos = new HashSet<>();
 
     @ManyToMany
     @JoinTable(name = "tb_atividade_participante",
@@ -93,7 +93,7 @@ public class Atividade {
         this.categoria = categoria;
     }
 
-    public Set<Blocos> getBlocos() {
+    public Set<Bloco> getBlocos() {
         return blocos;
     }
 
